@@ -7,6 +7,7 @@
     },
     "devDependencies": {
         "@arco-design/web-vue": "^2.18.1",
+        "nuxt-windicss": "^2.2.8",
         "nuxt3": "latest",
         "unplugin-icons": "^0.13.3",
         "unplugin-vue-components": "^0.17.21",

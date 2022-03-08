@@ -11,18 +11,20 @@ export default defineNuxtConfig({
             Components({
                 dts: true,
                 resolvers: [
-                    IconsResolver({
-                        prefix: 'i'
-                    }),
-                    ArcoResolver({
-                        importStyle: 'css',
-                        resolveIcons: true
-                    })
+                    IconsResolver(),
+                    ArcoResolver()
                 ],
             }),
         ],
     },
     build: {
-        transpile: ['compute-scroll-into-view', '@arco-design/web-vue'],
+        transpile: ['compute-scroll-into-view'],
     },
+    buildModules: [
+        /**
+         * @see https://windicss.org en
+         * @see https://cn.windicss.org cn
+         */
+        'nuxt-windicss',
+    ],
 })
