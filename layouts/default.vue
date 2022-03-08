@@ -9,23 +9,29 @@
                 @menuItemClick="onClickMenuItem"
             >
                 <a-menu-item key="0_1" disabled>
-                    <IconHome />
+                    <client-only>
+                        <icon-home></icon-home>
+                    </client-only>
                     <span>Menu 1</span>
                 </a-menu-item>
                 <a-menu-item key="0_2">
-                    <IconCalendar />
-
+                    <client-only>
+                        <icon-calendar></icon-calendar>
+                    </client-only>
                     <span>Menu 2</span>
                 </a-menu-item>
                 <a-menu-item key="0_3">
-                    <IconCalendar />
-
+                    <client-only>
+                        <icon-calendar></icon-calendar>
+                    </client-only>
                     <span>Menu 3</span>
                 </a-menu-item>
                 <a-sub-menu key="1">
                     <template #title>
                         <span>
-                            <IconCalendar />
+                            <client-only>
+                                <icon-calendar></icon-calendar>
+                            </client-only>
                             <span>Navigation 1</span>
                         </span>
                     </template>
@@ -43,7 +49,12 @@
                 </a-sub-menu>
                 <a-sub-menu key="4">
                     <template #title>
-                        <span> <IconCalendar /> Navigation 4</span>
+                        <span>
+                            <client-only>
+                                <icon-calendar></icon-calendar>
+                            </client-only>
+                            <span>Navigation 4</span>
+                        </span>
                     </template>
                     <a-menu-item key="4_1">Menu 1</a-menu-item>
                     <a-menu-item key="4_2">Menu 2</a-menu-item>
@@ -54,8 +65,10 @@
         <a-layout>
             <a-layout-header style="padding-left: 20px">
                 <a-button shape="round" @click="onCollapse">
-                    <IconCaretRight v-if="collapsed" />
-                    <IconCaretLeft v-else />
+                    <client-only>
+                        <icon-caret-right v-if="collapsed" />
+                        <icon-caret-left v-else />
+                    </client-only>
                 </a-button>
             </a-layout-header>
             <a-layout style="padding: 0 24px">
