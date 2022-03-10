@@ -12,4 +12,8 @@ export default defineNuxtConfig({
          */
         'nuxt-windicss',
     ],
+    components: [
+        '~/components',
+        { path: 'node_modules/@arco-design/web-vue/es/', prefix: 'a' }
+    ],
 })
